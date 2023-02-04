@@ -4,6 +4,7 @@
 box-sizing: border-box;}
 
     body{
+        font-family:  monospace;
 
         background: black;
         color: #00ff00;
@@ -17,9 +18,8 @@ box-sizing: border-box;}
         color: black;
     }
 .codeline{
-    color: #00ff0022;
+    color: #00ff0011;
     font-size: 1.1em;
-    font-family:  monospace;
     // background: red;
     text-shadow: 0 0 3px #2dec5611;
     // &::before{
@@ -52,24 +52,29 @@ box-sizing: border-box;}
 
  
 #LogoCenterizer{
+    
     position: absolute;
     top: 0%;
 width: 100vw;
+opacity: 0;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
     // background: red;
-    pointer-events: none;
+    // pointer-events: none;
+    animation: LogoFadeIn 1s ease .1s 1 forwards;
+
 }
 #Logo{
     // background: red;
-    opacity: 0;
-    font-size: 1.2vw;
+    font-size: max(1.9vw,3vh);
     z-index: 100;
     // left: 50%;
     // translate: -50% -50%;
-    animation: LogoFadeIn 10s ease 2s 1 forwards;
 }
 @keyframes LogoFadeIn {
     0%{
@@ -77,5 +82,21 @@ width: 100vw;
     }
     100%{
         opacity: 1;
+    }
+}
+.Button{
+   font-size: min(.8vh,.8vw);
+    box-sizing: border-box;
+    // background: red;
+    border: 1px solid #00ff00;
+    padding: 2em;
+    transition: .3s;
+    text-shadow: 0 0 0px #000000;
+    cursor: pointer;
+    &:hover{
+        // border-radius: 3px;
+        // padding: .5em;
+        text-shadow: 0 0 10px #59f37a;
+        
     }
 }

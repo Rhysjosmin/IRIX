@@ -26,21 +26,21 @@ function ADDRiddle(Riddle){
     
 }
 
-async function main(){
-    // let res=await ADDRiddle('Why Are You Here?')
-    setTimeout(()=>{
-        ADDRiddle('sd')
+// async function main(){
+//     // let res=await ADDRiddle('Why Are You Here?')
+//     // setTimeout(()=>{
+//     //     ADDRiddle('sd')
 
-    },100)
+//     // },100)
 
-    setTimeout(()=>{
-        ADDRiddle('Why Are You Here?')
+//     // setTimeout(()=>{
+//     //     ADDRiddle('Why Are You Here?')
 
-    },200)
+//     // },200)
    
  
-}
-main()
+// }
+// main()
 
 // function makeid(length) {
 //     let result = '';

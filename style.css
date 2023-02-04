@@ -6,6 +6,7 @@
 }
 
 body {
+  font-family: monospace;
   background: black;
   color: #00ff00;
 }
@@ -25,9 +26,8 @@ body {
 }
 
 .codeline {
-  color: rgba(0, 255, 0, 0.1333333333);
+  color: rgba(0, 255, 0, 0.0666666667);
   font-size: 1.1em;
-  font-family: monospace;
   text-shadow: 0 0 3px rgba(45, 236, 86, 0.0666666667);
   white-space: pre;
 }
@@ -63,19 +63,19 @@ body {
   position: absolute;
   top: 0%;
   width: 100vw;
+  opacity: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  pointer-events: none;
+  -webkit-animation: LogoFadeIn 1s ease 0.1s 1 forwards;
+          animation: LogoFadeIn 1s ease 0.1s 1 forwards;
 }
 
 #Logo {
-  opacity: 0;
-  font-size: 1.2vw;
+  font-size: max(1.9vw, 3vh);
   z-index: 100;
-  -webkit-animation: LogoFadeIn 10s ease 2s 1 forwards;
-          animation: LogoFadeIn 10s ease 2s 1 forwards;
 }
 
 @-webkit-keyframes LogoFadeIn {
@@ -94,4 +94,16 @@ body {
   100% {
     opacity: 1;
   }
+}
+.Button {
+  font-size: min(0.8vh, 0.8vw);
+  box-sizing: border-box;
+  border: 1px solid #00ff00;
+  padding: 2em;
+  transition: 0.3s;
+  text-shadow: 0 0 0px #000000;
+  cursor: pointer;
+}
+.Button:hover {
+  text-shadow: 0 0 10px #59f37a;
 }/*# sourceMappingURL=style.css.map */
