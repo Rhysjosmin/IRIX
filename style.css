@@ -1,0 +1,97 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #00ff00;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-moz-selection {
+  background: white;
+  color: black;
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+.codeline {
+  color: rgba(0, 255, 0, 0.1333333333);
+  font-size: 1.1em;
+  font-family: monospace;
+  text-shadow: 0 0 3px rgba(45, 236, 86, 0.0666666667);
+  white-space: pre;
+}
+
+.activeLine::after {
+  content: "█";
+  -webkit-animation: Blink_Cursor 0.8s ease 0s infinite;
+          animation: Blink_Cursor 0.8s ease 0s infinite;
+}
+
+#Code {
+  overflow: hidden;
+}
+
+@-webkit-keyframes Blink_Cursor {
+  0%, 100% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
+@keyframes Blink_Cursor {
+  0%, 100% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+#LogoCenterizer {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  pointer-events: none;
+}
+
+#Logo {
+  opacity: 0;
+  font-size: 1.2vw;
+  z-index: 100;
+  -webkit-animation: LogoFadeIn 10s ease 2s 1 forwards;
+          animation: LogoFadeIn 10s ease 2s 1 forwards;
+}
+
+@-webkit-keyframes LogoFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes LogoFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

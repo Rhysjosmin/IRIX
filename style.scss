@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;}
+
+    body{
+
+        background: black;
+        color: #00ff00;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    ::selection{
+        background: white;
+        color: black;
+    }
+.codeline{
+    color: #00ff0022;
+    font-size: 1.1em;
+    font-family:  monospace;
+    // background: red;
+    text-shadow: 0 0 3px #2dec5611;
+    // &::before{
+    //     content: '>>';
+    // }
+    white-space: pre;
+
+
+}
+.activeLine{
+    &::after{
+        content: '█';
+        animation: Blink_Cursor .8s ease 0s infinite;
+    }
+}
+#Code{
+    // background: red;
+    overflow: hidden;
+    
+}
+@keyframes Blink_Cursor {
+    0%,100%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    
+}
+
+ 
+#LogoCenterizer{
+    position: absolute;
+    top: 0%;
+width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background: red;
+    pointer-events: none;
+}
+#Logo{
+    // background: red;
+    opacity: 0;
+    font-size: 1.2vw;
+    z-index: 100;
+    // left: 50%;
+    // translate: -50% -50%;
+    animation: LogoFadeIn 10s ease 2s 1 forwards;
+}
+@keyframes LogoFadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
