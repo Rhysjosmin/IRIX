@@ -43,7 +43,7 @@ function randomChar(r,word) {
 sentenceCounter=0
 function generateLine() {
   let line = "";
-  sentence=['Why Are You here?','Maybe The World Needed You Here','   IRIX ','  Who Are You??  ',' Rhys Made This','RHYS','RHYS JOSMIN', "Robot: Who are you humans?","Alien: What brings you to our planet?","What is Your Purpose?","Robot: Why have you come to our world?","Do You Have a Message for Us?","Alien: What is your mission on our planet?","What is Your Intention?","Alien: Where do you come from?","What Do You Seek?","Robot: What is your purpose in exploring our world?","What is Your Quest?",]
+  sentence=['Why Are You here?','Maybe The World Needed You Here','   IRIX ','  Who Are You??  ','RHYS JOSMIN', "Robot: Who are you humans?","Alien: What brings you to our planet?","What is Your Purpose?","Robot: Why have you come to our world?","Do You Have a Message for Us?","Alien: What is your mission on our planet?","What is Your Intention?","Alien: Where do you come from?","What Do You Seek?","Robot: What is your purpose in exploring our world?","What is Your Quest?",]
   sentenceCounter+=Math.random()/100
   if(sentenceCounter>sentence.length-1){
     sentenceCounter=0
