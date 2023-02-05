@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: monospace;
   background: black;
   color: #00ff00;
