@@ -51,16 +51,53 @@ IIIIIIIIIIRRRRRRRR     RRRRRRRIIIIIIIIIIXXXXXXX       XXXXXXX</pre> -->
  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝</pre></div>
         </div>
     </main>
+
+    <section id="Video"><video src="./WhatsApp Video 2023-02-04 at 15.51.37.mp4" ></video></section>
  
     
 </body>
 <script src="./script.js"></script>
 <script>
-
+function Position(obj){
+ var currenttop = 0;
+ if (obj.offsetParent){
+  do {
+   currenttop += obj.offsetTop;
+ }while ((obj = obj.offsetParent));
+  return [currenttop];
+ }
+}
+var audio = new Audio('./Media/alien2.mp3');
+audio.play();
     function href(link){
-     
+        const Video=document.getElementById('Video')
+        window.scrollTo(0, Position(Video)-window.innerHeight/8);
+        audio.volume=.2
 
-setTimeout(()=>{window.location.href=link},00)
+  if (Video.requestFullscreen) {
+    Video.requestFullscreen();
+  } else if (Video.webkitRequestFullscreen) { /* Safari */
+    Video.webkitRequestFullscreen();
+  } else if (Video.msRequestFullscreen) { /* IE11 */
+    Video.msRequestFullscreen();
+  }
+
+        Video.children[0].play()
+// setTimeout(()=>{window.location.href=link},00)
     }
 </script>
+<style>
+    #Video{
+        height: 80vh;
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    
+    }
+    #Video video{
+        max-width: 90vw;
+    }
+</style>
+
 </html>

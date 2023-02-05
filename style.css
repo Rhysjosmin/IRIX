@@ -39,6 +39,8 @@ body {
 }
 
 #Code {
+  z-index: -10;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -60,7 +62,6 @@ body {
   }
 }
 #LogoCenterizer {
-  position: absolute;
   top: 0%;
   width: 100vw;
   opacity: 0;

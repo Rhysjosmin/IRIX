@@ -1,8 +1,7 @@
 const Code=document.getElementById("Code")
 let CodeLines=document.getElementsByClassName('codeline')
 let AddedLines=0
-audio = new Audio('./Media/alien-tech-ambience-drone-19619.mp3');
-audio.play();
+
 
 
 

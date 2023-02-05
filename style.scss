@@ -36,6 +36,8 @@ box-sizing: border-box;}
     }
 }
 #Code{
+    z-index: -10;
+    position: absolute;
     // background: red;
     overflow: hidden;
     
@@ -53,7 +55,7 @@ box-sizing: border-box;}
  
 #LogoCenterizer{
     
-    position: absolute;
+    // position: absolute;
     top: 0%;
 width: 100vw;
 opacity: 0;
