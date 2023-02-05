@@ -70,8 +70,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  -webkit-animation: LogoFadeIn 10s ease 0.1s 1 forwards;
-          animation: LogoFadeIn 10s ease 0.1s 1 forwards;
+  -webkit-animation: LogoFadeIn 10s ease 2s 1 forwards;
+          animation: LogoFadeIn 10s ease 2s 1 forwards;
 }
 
 #Logo {
