@@ -26,9 +26,9 @@ body {
 }
 
 .codeline {
-  color: rgba(0, 255, 0, 0.0666666667);
+  color: #00ff00;
   font-size: 1.1em;
-  text-shadow: 0 0 3px rgba(45, 236, 86, 0.0666666667);
+  text-shadow: 0 0 3px #2dec56;
   white-space: pre;
 }
 
@@ -69,8 +69,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  -webkit-animation: LogoFadeIn 1s ease 0.1s 1 forwards;
-          animation: LogoFadeIn 1s ease 0.1s 1 forwards;
+  -webkit-animation: LogoFadeIn 10s ease 0.1s 1 forwards;
+          animation: LogoFadeIn 10s ease 0.1s 1 forwards;
 }
 
 #Logo {
@@ -80,18 +80,22 @@ body {
 
 @-webkit-keyframes LogoFadeIn {
   0% {
+    scale: 1.2;
     opacity: 0;
   }
   100% {
+    scale: 1;
     opacity: 1;
   }
 }
 
 @keyframes LogoFadeIn {
   0% {
+    scale: 1.2;
     opacity: 0;
   }
   100% {
+    scale: 1;
     opacity: 1;
   }
 }

@@ -1,6 +1,8 @@
 const Code=document.getElementById("Code")
 let CodeLines=document.getElementsByClassName('codeline')
 let AddedLines=0
+audio = new Audio('./Media/alien-tech-ambience-drone-19619.mp3');
+audio.play();
 
 
 
@@ -26,49 +28,30 @@ function ADDRiddle(Riddle){
     
 }
 
-// async function main(){
-//     // let res=await ADDRiddle('Why Are You Here?')
-//     // setTimeout(()=>{
-//     //     ADDRiddle('sd')
-
-//     // },100)
-
-//     // setTimeout(()=>{
-//     //     ADDRiddle('Why Are You Here?')
-
-//     // },200)
-   
- 
-// }
-// main()
-
-// function makeid(length) {
-//     let result = '';
-//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     const charactersLength = characters.length;
-//     let counter = 0;
-//     while (counter < length) {
-//       result += characters.charAt(Math.floor(Math.random() * charactersLength));
-//       counter += 1;
-//     }
-//     return result;
-// }
-
-
-// const code = document.getElementById("code");
-// const code = document.getElementById("code");
 const characters = "IRIX01";
 const lineLength = 200;
 const fontSize = 15;
 
-function randomChar() {
-  return characters[Math.floor(Math.random() * characters.length)];
-}
+function randomChar(r,word) {
+  if(r<10){
+    return word;
 
+  }else{
+    return characters[Math.floor(Math.random() * characters.length)];
+
+  }
+}
+sentenceCounter=0
 function generateLine() {
   let line = "";
+  sentence=['Why Are You here?','Maybe The World Needed You Here','   IRIX ','  Who Are You??  ',' Rhys Made This','RHYS','RHYS JOSMIN', "Robot: Who are you humans?","Alien: What brings you to our planet?","What is Your Purpose?","Robot: Why have you come to our world?","Do You Have a Message for Us?","Alien: What is your mission on our planet?","What is Your Intention?","Alien: Where do you come from?","What Do You Seek?","Robot: What is your purpose in exploring our world?","What is Your Quest?",]
+  sentenceCounter+=Math.random()/100
+  if(sentenceCounter>sentence.length-1){
+    sentenceCounter=0
+  }
+  
   for (let i = 0; i < lineLength; i++) {
-    line += randomChar();
+    line += randomChar(Math.random()*100,sentence[Math.round(sentenceCounter+Math.random()/100)]);
   }
   return line;
 }
@@ -94,7 +77,7 @@ setInterval(()=>{
     updateLines(); 
 
 
-},100)
+},200)
 text='IRIX'
 function updateText() {
     const centerLine = Code.childNodes[Math.floor(Code.childNodes.length / 2)];

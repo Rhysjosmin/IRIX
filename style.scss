@@ -18,10 +18,10 @@ box-sizing: border-box;}
         color: black;
     }
 .codeline{
-    color: #00ff0011;
+    color: #00ff00;
     font-size: 1.1em;
     // background: red;
-    text-shadow: 0 0 3px #2dec5611;
+    text-shadow: 0 0 3px #2dec56;
     // &::before{
     //     content: '>>';
     // }
@@ -66,7 +66,7 @@ opacity: 0;
     
     // background: red;
     // pointer-events: none;
-    animation: LogoFadeIn 1s ease .1s 1 forwards;
+    animation: LogoFadeIn 10s ease .1s 1 forwards;
 
 }
 #Logo{
@@ -78,9 +78,11 @@ opacity: 0;
 }
 @keyframes LogoFadeIn {
     0%{
+        scale: 1.2;
         opacity: 0;
     }
     100%{
+        scale: 1;
         opacity: 1;
     }
 }
