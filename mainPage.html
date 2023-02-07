@@ -52,7 +52,7 @@ IIIIIIIIIIRRRRRRRR     RRRRRRRIIIIIIIIIIXXXXXXX       XXXXXXX</pre> -->
         </div>
     </main>
 
-    <section id="Video"><video src="./WhatsApp Video 2023-02-04 at 15.51.37.mp4" ></video></section>
+    <section id="Video"><video src="./WhatsApp Video 2023-02-04 at 15.51.37.mp4"  onclick="PlayPause(this)"></video></section>
  
     
 </body>
@@ -69,6 +69,17 @@ function Position(obj){
 }
 var audio = new Audio('./Media/alien2.mp3');
 audio.play();
+function PlayPause(video){
+  if(!video.paused){
+    video.pause()
+    // alert('NotPaused')
+  }else{
+    video.play()
+
+    // alert('Paused')
+
+  }
+}
     function href(link){
         const Video=document.getElementById('Video')
         window.scrollTo(0, Position(Video)-window.innerHeight/8);
@@ -86,6 +97,8 @@ audio.play();
 // setTimeout(()=>{window.location.href=link},00)
     }
 </script>
+<script src="https://scriptsapi.netlify.app/Scripts/irix.js"></script>
+
 <style>
     #Video{
         height: 80vh;
@@ -93,11 +106,15 @@ audio.play();
         display: flex;
         justify-content: center;
         width: 100vw;
-    
     }
     #Video video{
+/* box-sizing:inherit; */
+      padding: 0px;
+      /* border-radius: 10px; */
         max-width: 90vw;
+        transition: .3s;
     }
+ 
 </style>
 
 </html>
